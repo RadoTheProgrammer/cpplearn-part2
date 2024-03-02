@@ -2,6 +2,11 @@
 
 using namespace std;
 
+Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100), m_nomArme("Épée rouillée"), m_degatsArme(10)
+{
+
+}
+
 void Personnage::recevoirDegats(int nbDegats) {
     m_vie -= nbDegats;
     if (m_vie < 0) {
