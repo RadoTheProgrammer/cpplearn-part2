@@ -19,7 +19,5 @@ int main(){
     cout << endl << "Goliath" << endl;
     goliath.afficherEtat();
 
-    cout << "David est vivant" << david.estVivant() << endl;
-
     return 0;
 }
