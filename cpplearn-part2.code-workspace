@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../cpplearn"
+		},
+		{
+			"path": "chap13_class1"
+		},
+		{
+			"path": "chap15_operators_yt"
+		}
+	],
+	"settings": {
+		"github.copilot.editor.enableAutoCompletions": false,
+		"files.associations": {
+			"iostream": "cpp",
+			"string": "cpp"
+		}
+	}
+}
