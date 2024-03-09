@@ -4,10 +4,13 @@
 			"path": "../cpplearn"
 		},
 		{
-			"path": "chap13_class1"
+			"path": "chap15_operators_yt"
 		},
 		{
-			"path": "chap15_operators_yt"
+			"path": "chap16_zfraction_tp"
+		},
+		{
+			"path": "chap13_class1"
 		}
 	],
 	"settings": {

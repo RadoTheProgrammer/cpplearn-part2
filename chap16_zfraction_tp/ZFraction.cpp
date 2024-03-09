@@ -1,0 +1,39 @@
+#include "ZFraction.h"
+#include <iostream>
+
+using namespace std;
+int pgcd(int a, int b)
+{
+    while (b != 0)
+    {
+        const int t = b;
+        b = a%b;
+        a=t;
+    }
+    return a;
+}
+
+ZFraction::ZFraction(int numerateur, int denominateur)
+        : m_numerateur(numerateur), m_denominateur(denominateur) {}
+
+// ZFraction ZFraction::operator+(const ZFraction& other) const
+// {
+//     int newNumerateur = (m_numerateur * other.m_denominateur) + (other.m_numerateur * m_denominateur);
+//     int newDenominateur = m_denominateur * other.m_denominateur;
+//     int gcd = pgcd(newNumerateur, newDenominateur);
+//     newNumerateur /= gcd;
+//     newDenominateur /= gcd;
+//     return ZFraction(newNumerateur, newDenominateur);
+// }
+
+void ZFraction::affiche(ostream& flux) const
+{
+    if(m_denominateur == 1)
+    {
+        flux << m_numerateur;
+    }
+    else
+    {
+        flux << m_numerateur << "/" << m_denominateur;
+    }
+}
