@@ -15,12 +15,12 @@ int main()
     ZFraction b(2);
     ZFraction c,d;
     cout << a << endl;
-    // c = a+b;
+    c = a+b;
 
-    // d = a*b;
+    d = a*b;
 
-    // cout << a << " + " << b << " = " << c << endl;
-    // cout << a << " * " << b << " = " << d << endl;
+    cout << a << " + " << b << " = " << c << endl;
+    cout << a << " * " << b << " = " << d << endl;
 
     // if (a > b)
     //     cout << "a est plus grand que b" << endl;

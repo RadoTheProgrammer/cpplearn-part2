@@ -37,3 +37,39 @@ void ZFraction::affiche(ostream& flux) const
         flux << m_numerateur << "/" << m_denominateur;
     }
 }
+
+ZFraction operator+(ZFraction const& a, ZFraction const& b)
+{
+    ZFraction copie(a);
+    copie+=b;
+    return copie;
+}
+
+ZFraction& ZFraction::operator+=(ZFraction const& other)
+{
+    m_numerateur = m_numerateur * other.m_denominateur + m_denominateur * other.m_numerateur;
+    m_denominateur *= m_denominateur;
+
+    return *this;
+}
+
+ZFraction operator*(ZFraction const& a, ZFraction const& b)
+{
+    ZFraction copie(a);
+    copie*=b;
+    return copie;
+}
+
+ZFraction& ZFraction::operator*=(ZFraction const& other)
+{
+    cout << m_numerateur << " " << other.m_numerateur << endl;
+    m_numerateur *= other.m_numerateur;
+    m_denominateur *= other.m_denominateur;
+    cout << m_numerateur << " " << other.m_numerateur << endl;
+    cout << m_denominateur << endl;
+    return *this;
+}
+
+
+
+
