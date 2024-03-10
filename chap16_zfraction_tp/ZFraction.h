@@ -14,6 +14,9 @@ public:
     bool estEgal(ZFraction const& other) const;
     bool estPlusPetitQue(ZFraction const& other) const;
     void simplifier();
+    int numerateur() const;
+    int denominateur() const;
+    double nombreRationnel() const;
     // ZFraction operator+(const ZFraction& other) const;
     // ZFraction operator*(const ZFraction& other) const;
     // ZFraction operator>(const ZFraction& other) const;

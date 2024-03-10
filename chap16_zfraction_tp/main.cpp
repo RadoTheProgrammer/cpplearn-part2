@@ -37,5 +37,8 @@ int main()
 
     a.simplifier();
     cout << "a simplifié : " << a << endl;
+    cout << "num : " << a.numerateur() << endl;
+    cout << "denominateur : " << a.denominateur() << endl;
+    cout << "double : " << a.nombreRationnel() << endl;
 
 }

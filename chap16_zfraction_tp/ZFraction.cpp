@@ -128,5 +128,17 @@ void ZFraction::simplifier(){
     m_denominateur /= p;
 }
 
+int ZFraction::numerateur() const{
+    return m_numerateur;
+}
+
+int ZFraction::denominateur() const {
+    return m_denominateur;
+}
+
+double ZFraction::nombreRationnel() const{
+    return m_numerateur/m_denominateur;
+}
+
 
 
