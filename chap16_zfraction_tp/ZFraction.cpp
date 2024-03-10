@@ -72,4 +72,27 @@ ZFraction& ZFraction::operator*=(ZFraction const& other)
 
 
 
+bool ZFraction::estEgal(ZFraction const& other) const
+{
+    if (m_numerateur == other.m_numerateur && m_denominateur == other.m_denominateur) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool operator==(ZFraction const& a, ZFraction const& b)
+{
+    if (a.estEgal(b))
+        return true;
+    else
+        return false;
+}
+
+bool operator!=(ZFraction const& a, ZFraction const& b)
+{
+    return !(a == b);
+}
+
+
 

@@ -11,6 +11,7 @@ public:
     void affiche(ostream& flux) const;
     ZFraction& operator+=(ZFraction const& other);
     ZFraction& operator*=(ZFraction const& other);
+    bool estEgal(ZFraction const& other) const;
     // ZFraction operator+(const ZFraction& other) const;
     // ZFraction operator*(const ZFraction& other) const;
     // ZFraction operator>(const ZFraction& other) const;
@@ -23,3 +24,5 @@ private:
 int pgcd(int a, int b);
 ZFraction operator+(ZFraction const& a, ZFraction const& b);
 ZFraction operator*(ZFraction const& a, ZFraction const& b);
+bool operator==(ZFraction const& a, ZFraction const& b);
+bool operator!=(ZFraction const& a, ZFraction const& b);

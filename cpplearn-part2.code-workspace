@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "chap13_class1"
+		},
+		{
+			"path": "../cmakeQuickStart"
 		}
 	],
 	"settings": {
