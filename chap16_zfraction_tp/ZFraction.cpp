@@ -14,7 +14,9 @@ int pgcd(int a, int b)
 }
 
 ZFraction::ZFraction(int numerateur, int denominateur)
-        : m_numerateur(numerateur), m_denominateur(denominateur) {}
+        : m_numerateur(numerateur), m_denominateur(denominateur) {
+            simplifier();
+        }
 
 // ZFraction ZFraction::operator+(const ZFraction& other) const
 // {
@@ -50,6 +52,7 @@ ZFraction& ZFraction::operator+=(ZFraction const& other)
     m_numerateur = m_numerateur * other.m_denominateur + m_denominateur * other.m_numerateur;
     m_denominateur *= m_denominateur;
 
+    simplifier();
     return *this;
 }
 
@@ -62,11 +65,11 @@ ZFraction operator*(ZFraction const& a, ZFraction const& b)
 
 ZFraction& ZFraction::operator*=(ZFraction const& other)
 {
-    cout << m_numerateur << " " << other.m_numerateur << endl;
+
     m_numerateur *= other.m_numerateur;
     m_denominateur *= other.m_denominateur;
-    cout << m_numerateur << " " << other.m_numerateur << endl;
-    cout << m_denominateur << endl;
+
+    simplifier();
     return *this;
 }
 
@@ -83,15 +86,46 @@ bool ZFraction::estEgal(ZFraction const& other) const
 
 bool operator==(ZFraction const& a, ZFraction const& b)
 {
-    if (a.estEgal(b))
-        return true;
-    else
-        return false;
+    return a.estEgal(b);
 }
 
 bool operator!=(ZFraction const& a, ZFraction const& b)
 {
-    return !(a == b);
+    return !a.estEgal(b);
+}
+
+bool ZFraction::estPlusPetitQue(ZFraction const& other) const
+{
+    return (
+        m_numerateur * other.m_denominateur < m_denominateur * other.m_numerateur
+    );
+}
+
+bool operator<(ZFraction const& a, ZFraction const& b)
+{
+    return a.estPlusPetitQue(b);
+}
+
+bool operator>(ZFraction const& a, ZFraction const& b)
+{
+    return b.estPlusPetitQue(a);
+}
+
+bool operator<=(ZFraction const& a, ZFraction const& b)
+{
+    return !b.estPlusPetitQue(a);
+}
+
+bool operator>=(ZFraction const& a, ZFraction const& b)
+{
+    return !a.estPlusPetitQue(b);
+}
+
+void ZFraction::simplifier(){
+    int p(pgcd(m_numerateur,m_denominateur));
+
+    m_numerateur /= p;
+    m_denominateur /= p;
 }
 
 

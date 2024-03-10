@@ -12,6 +12,8 @@ public:
     ZFraction& operator+=(ZFraction const& other);
     ZFraction& operator*=(ZFraction const& other);
     bool estEgal(ZFraction const& other) const;
+    bool estPlusPetitQue(ZFraction const& other) const;
+    void simplifier();
     // ZFraction operator+(const ZFraction& other) const;
     // ZFraction operator*(const ZFraction& other) const;
     // ZFraction operator>(const ZFraction& other) const;
@@ -26,3 +28,7 @@ ZFraction operator+(ZFraction const& a, ZFraction const& b);
 ZFraction operator*(ZFraction const& a, ZFraction const& b);
 bool operator==(ZFraction const& a, ZFraction const& b);
 bool operator!=(ZFraction const& a, ZFraction const& b);
+bool operator<(ZFraction const& a, ZFraction const& b);
+bool operator>(ZFraction const& a, ZFraction const& b);
+bool operator<=(ZFraction const& a, ZFraction const& b);
+bool operator>=(ZFraction const& a, ZFraction const& b);

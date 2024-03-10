@@ -21,7 +21,12 @@
 		"files.associations": {
 			"iostream": "cpp",
 			"string": "cpp",
-			"iosfwd": "cpp"
+			"iosfwd": "cpp",
+			"memory_resource": "cpp",
+			"filesystem": "cpp",
+			"random": "cpp",
+			"variant": "cpp",
+			"ostream": "cpp"
 		}
 	}
 }

@@ -11,10 +11,10 @@ ostream& operator<<(ostream& flux, ZFraction const& fraction)
 
 int main()
 {
-    ZFraction a(4,5);
-    ZFraction b(4,5);
+    ZFraction a(4,6);
+    ZFraction b(6,3);
     ZFraction c,d;
-    cout << a << endl;
+
     c = a+b;
 
     d = a*b;
@@ -23,12 +23,19 @@ int main()
     cout << a << " * " << b << " = " << d << endl;
 
     if (a==b)
-        cout << "a est egal a b" << endl;
+        cout << "a==b" << endl;
     if (a!=b)
-        cout << "a pas egal a b" << endl;
-    // if (a > b)
-    //     cout << "a est plus grand que b" << endl;
-    // else if (a==b)
-    //     cout << "a est egal a b" << endl;
-    // return 0;
+        cout << "a!=b" << endl;
+    if (a<b)
+        cout << "a<b" << endl;
+    if (a>b)
+        cout << "a>b" << endl;
+    if (a<=b)
+        cout << "a<=b" << endl;
+    if (a>=b)
+        cout << "a>=b" << endl;
+
+    a.simplifier();
+    cout << "a simplifié : " << a << endl;
+
 }
