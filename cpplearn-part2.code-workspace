@@ -17,11 +17,10 @@
 			"path": "chap16_zfraction_tp"
 		},
 		{
-			"name": "chap17_clsptr",
-			"path": "chap17_clsptr"
+			"path": "../cmake-learn"
 		},
 		{
-			"path": "../cmake-learn"
+			"path": "chap18_heritage"
 		}
 	],
 	"settings": {
