@@ -17,12 +17,11 @@
 			"path": "chap16_zfraction_tp"
 		},
 		{
-			"name": "cmakeQuickStart",
-			"path": "../cmakeQuickStart"
-		},
-		{
 			"name": "chap17_clsptr",
 			"path": "chap17_clsptr"
+		},
+		{
+			"path": "../cmake-learn"
 		}
 	],
 	"settings": {
