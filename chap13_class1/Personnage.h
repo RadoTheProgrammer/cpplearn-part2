@@ -9,7 +9,10 @@ class Personnage
 
     Personnage();
     Personnage(std::string nomArme, int degatsArme);
+    Personnage(Personnage const& personnageACopier);
     ~Personnage();
+    Personnage& operator=(Personnage const& personnageACopier) throw();
+
     
     void recevoirDegats(int nbDegats);
     void attaquer(Personnage &cible);
@@ -22,5 +25,5 @@ class Personnage
     
     int m_vie;
     int m_mana;
-    Arme m_arme;
+    Arme *m_arme;
 };

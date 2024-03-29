@@ -12,16 +12,35 @@ using namespace std;
 // }
 Personnage::Personnage() : m_vie(100), m_mana(100), m_arme()
 {
-
+    m_arme = new Arme();
 }
-Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_arme(nomArme, degatsArme)
+Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_arme(0), m_mana(100)
 {
-
+    m_arme = new Arme(nomArme, degatsArme);
 }
 
 Personnage::~Personnage()
 {
+    delete m_arme;
+}
 
+Personnage::Personnage(Personnage const& personnageACopier)
+    : m_vie(personnageACopier.m_vie), m_mana(personnageACopier.m_mana), m_arme(0)
+{
+    //m_arme = personnageACopier.m_arme;
+    m_arme = new Arme(*(personnageACopier.m_arme));
+}
+
+Personnage& Personnage::operator=(Personnage const& personnageACopier) throw()
+{
+    if (this != &personnageACopier)
+    {
+        m_vie = personnageACopier.m_vie;
+        m_mana = personnageACopier.m_mana;
+        delete m_arme;
+        m_arme = new Arme(*(personnageACopier.m_arme));
+    }
+    return *this;
 }
 void Personnage::recevoirDegats(int nbDegats)
 {
@@ -34,7 +53,7 @@ void Personnage::recevoirDegats(int nbDegats)
 
 void Personnage::attaquer(Personnage &cible)
 {
-    cible.recevoirDegats(m_arme.getDegats());
+    cible.recevoirDegats(m_arme->getDegats());
 }
 
 void Personnage::boirePotionDeVie(int quantitePotion)
@@ -66,11 +85,11 @@ void Personnage::afficherEtat() const
 {
     cout << "vie : " << m_vie << endl;
     cout << "mana : " << m_mana << endl;
-    m_arme.afficher();
+    m_arme->afficher();
 }
 
 void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
 {
-    m_arme.changer(nomNouvelleArme, degatsNouvelleArme);
+    m_arme->changer(nomNouvelleArme, degatsNouvelleArme);
 }
 
