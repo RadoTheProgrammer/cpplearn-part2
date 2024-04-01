@@ -7,6 +7,11 @@ Personnage::Personnage() : m_vie(100), m_nom("Jack")
 
 }
 
+Personnage::Personnage(string nom) : m_vie(100), m_nom(nom)
+{
+
+}
+
 void Personnage::recevoirDegats(int nbDegats)
 {
     m_vie -= nbDegats;

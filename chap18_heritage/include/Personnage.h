@@ -7,6 +7,7 @@ class Personnage
     public:
 
     Personnage();
+    Personnage(std::string nom);
     void recevoirDegats(int nbDegats);
     void coupDePoing(Personnage &cible) const;
 
