@@ -5,7 +5,7 @@ include(CTest)
 enable_testing()
 
 # Add all executables in src/*.cpp
-file(GLOB SOURCES "src/*.cpp")
+file(GLOB SOURCES src/*.cpp)
 include_directories(include)
 add_executable(a.out ${SOURCES})
 

@@ -11,7 +11,9 @@ class Personnage
     void recevoirDegats(int nbDegats);
     void coupDePoing(Personnage &cible) const;
 
-    private:
+    void sePresenter() const;
+    
+    protected:
     
     int m_vie;
     std::string m_nom;

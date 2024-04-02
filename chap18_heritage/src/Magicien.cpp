@@ -16,7 +16,8 @@ Magicien::Magicien(string nom) : Personnage(nom), m_mana(100)
 void Magicien::BouleDeFeu(Personnage &cible) const
 {
     //cout << "Le magicien invoque sa boule de feu" << endl;
-    cible.recevoirDegats(50)
+    cible.recevoirDegats(50);
+    
 }
 
 void Magicien::BouleDeGlace() const

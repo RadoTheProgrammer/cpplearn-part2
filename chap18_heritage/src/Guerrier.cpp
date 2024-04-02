@@ -3,8 +3,15 @@
 
 using namespace std;
 
-void Guerrier::frapperCommeUnSourdAvecUnMarteau() const
+void Guerrier::frapperCommeUnSourdAvecUnMarteau(Personnage &cible) const
 {
-    cout << "Le guerrier frappe comme un sourd avec un marteau" << endl;
-    
+    cible.recevoirDegats(20);
+    //cout << "Le guerrier frappe comme un sourd avec un marteau" << endl;
+
+}
+
+void Guerrier::sePresenter() const
+{
+    Personnage::sePresenter();
+    std::cout << "Je suis un guerrier redoutable" << std::endl;
 }
