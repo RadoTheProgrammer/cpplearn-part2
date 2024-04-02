@@ -7,10 +7,10 @@
 class Magicien : public Personnage
 {
     public:
-        void BouleDeFeu() const;
+        void BouleDeFeu(Personnage &cible) const;
         void BouleDeGlace() const;
         Magicien();
-        Magicien(string nom);
+        Magicien(std::string nom);
 
     private:
         int m_mana;

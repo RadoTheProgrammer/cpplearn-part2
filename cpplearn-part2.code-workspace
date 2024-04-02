@@ -1,16 +1,8 @@
 {
 	"folders": [
 		{
-			"name": "cpplearn",
-			"path": "../cpplearn"
-		},
-		{
 			"name": "chap13_class1",
 			"path": "chap13_class1"
-		},
-		{
-			"name": "chap15_operators_yt",
-			"path": "chap15_operators_yt"
 		},
 		{
 			"name": "chap16_zfraction_tp",

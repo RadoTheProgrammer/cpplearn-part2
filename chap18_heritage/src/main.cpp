@@ -5,11 +5,12 @@
 using namespace std;
 
 int main(){
-    // Personnage monPersonnage;
-    // Guerrier monGuerrier;
-    // monPersonnage.coupDePoing(monGuerrier);
-    // monGuerrier.coupDePoing(monPersonnage);
-    cout << "hello2" << endl;
+    Personnage monPersonnage;
+    Guerrier monGuerrier;
+    monPersonnage.coupDePoing(monGuerrier);
+    monGuerrier.coupDePoing(monPersonnage);
+    //cout << "hello2" << endl;
+
     // Personnage *monPersonnage(0);
     // Guerrier *monGuerrier = new Guerrier();
 
@@ -17,7 +18,7 @@ int main(){
 
 
     Magicien merlin;
-    merlin.bouleDeFeu(cible);
+    merlin.BouleDeFeu(monPersonnage);
     //monGuerrier = monPersonnage;
 
     //Note: objectMere est monPersonnage, et objetFille est monGuerrier
